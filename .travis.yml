@@ -22,6 +22,8 @@ env:
   - NEO4J_VERSION="2.0.1"
 script:
   - coverage run setup.py test
+
+
 after_success:
   - if [ $NEO4J_VERSION == "2.0.0" ]; then
     coveralls;
