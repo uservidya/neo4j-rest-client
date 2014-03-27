@@ -1,7 +1,9 @@
 language: python
 python:
   - "2.7"
-  
+services:
+  - neo4j
+
 before_install:
   - export NEO4J_PORT="7474"
   - sudo service neo4j stop || true
